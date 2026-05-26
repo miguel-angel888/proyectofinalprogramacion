@@ -24,11 +24,19 @@ Notificacion
 
 El problema se dividió en varios módulos para facilitar su análisis, diseño e implementación. Cada módulo se encarga de una parte específica del sistema inmobiliario:
 
-Usuario manejo de registro, inicio de sesión y administración de compradores y vendedores
+Usuario manejo de registro, inicio de sesión y administración de compradores y vendedores                                                                                                     
+
+
 Inmuebles: Gestión de publicación edición, búsqueda y visualización de propiedades
+
+
 ofertas permite que los compradores realicen ofertas sobre los inmuebles publicados
+
+
 Transcciones: Procesa la compra del inmueble y registra la operación realizada
-reportes: genera consultas e información sobre usuarios, inmuebles, compras y ventas realizadas.
+
+
+reportes: genera consultas e información sobre usuarios
 
 De esta manera cada parte del sistema se desarrolla de forma independiente pero trabajando en conjunto dentro de la plataforma
 
@@ -65,12 +73,7 @@ Compra de inmuebles
 Se verificó el proceso completo de comrp´ra
 
 
-Generación de reportes
-Se probaron consultas relacionadas con:
 
-
-vendedores con más publicaciones
-compradores con mas inmuebles comprados
 
 
 
