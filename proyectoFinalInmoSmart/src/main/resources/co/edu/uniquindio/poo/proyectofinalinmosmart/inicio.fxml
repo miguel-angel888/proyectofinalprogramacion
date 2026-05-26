@@ -13,34 +13,34 @@
 <?import javafx.scene.control.Button?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.proyectofinalinmosmart.controllers.InicioController">
-   <children>
-      <ImageView fitHeight="450.0" fitWidth="664.0" layoutX="-17.0" layoutY="-23.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../../../../../imagenes/InicioSesion.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="393.0" layoutY="88.0" text="Inicio Sesion" textFill="#246807">
-         <font>
-            <Font name="Eras Bold ITC" size="24.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtNombre" layoutX="375.0" layoutY="128.0" prefHeight="37.0" prefWidth="187.0" promptText="Nombre">
-         <font>
-            <Font name="Arial" size="15.0" />
-         </font></TextField>
-      <ComboBox fx:id="cmbRol" layoutX="375.0" layoutY="202.0" prefHeight="31.0" prefWidth="187.0" promptText="Rol" />
-      <TextField fx:id="txtID" layoutX="375.0" layoutY="165.0" prefHeight="37.0" prefWidth="187.0" promptText="Identificacion">
-         <font>
-            <Font name="Arial" size="15.0" />
-         </font>
-      </TextField>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="375.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../../../../../imagenes/Anotación%202026-05-24%20233242.jpg" />
-         </image>
-      </ImageView>
-      <Label fx:id="lblInicioFallido" contentDisplay="CENTER" layoutX="375.0" layoutY="288.0" prefHeight="21.0" prefWidth="200.0" textFill="RED" />
-      <Button fx:id="btnIniciarSesion" layoutX="375.0" layoutY="239.0" mnemonicParsing="false" onAction="#onClick" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #246807;" text="Iniciar Sesion" textFill="WHITE" />
-      <Button fx:id="btnRegistro" layoutX="376.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnRegistroOnAction" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #246807;" text="Registro" textFill="WHITE" />
-   </children>
+    <children>
+        <ImageView fitHeight="450.0" fitWidth="664.0" layoutX="-17.0" layoutY="-23.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../../../../../../imagenes/InicioSesion.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="393.0" layoutY="88.0" text="Inicio Sesion" textFill="#246807">
+            <font>
+                <Font name="Eras Bold ITC" size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtNombre" layoutX="375.0" layoutY="128.0" prefHeight="37.0" prefWidth="187.0" promptText="Nombre">
+            <font>
+                <Font name="Arial" size="15.0" />
+            </font></TextField>
+        <ComboBox fx:id="cmbRol" layoutX="375.0" layoutY="202.0" prefHeight="31.0" prefWidth="187.0" promptText="Rol" />
+        <TextField fx:id="txtID" layoutX="375.0" layoutY="165.0" prefHeight="37.0" prefWidth="187.0" promptText="Identificacion">
+            <font>
+                <Font name="Arial" size="15.0" />
+            </font>
+        </TextField>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="375.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../../../../../../imagenes/Anotación%202026-05-24%20233242.jpg" />
+            </image>
+        </ImageView>
+        <Label fx:id="lblInicioFallido" contentDisplay="CENTER" layoutX="375.0" layoutY="288.0" prefHeight="21.0" prefWidth="200.0" textFill="RED" />
+        <Button fx:id="btnIniciarSesion" layoutX="375.0" layoutY="239.0" mnemonicParsing="false" onAction="#onClick" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #246807;" text="Iniciar Sesion" textFill="WHITE" />
+        <Button fx:id="btnRegistro" layoutX="371.0" layoutY="315.0" mnemonicParsing="false" onAction="#btnRegistroOnAction" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #246807;" text="Registro" textFill="WHITE" />
+    </children>
 </AnchorPane>

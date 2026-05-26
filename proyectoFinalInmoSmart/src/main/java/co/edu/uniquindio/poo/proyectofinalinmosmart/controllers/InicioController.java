@@ -61,10 +61,8 @@ public class InicioController {
         Sesion.telefono = cmbRol.getValue();
         Sesion.rol = cmbRol.getValue();
 
-        if(!empresa.buscarUsuario(txtID.getText())){
-            lblInicioFallido.setText("Usuario no registrado");
-        }
-        else if(txtNombre.getText().isBlank() ||
+
+         if(txtNombre.getText().isBlank() ||
                 txtID.getText().isBlank() ||
                 !txtID.getText().matches("\\d+") || cmbRol.getValue() == null){
             lblInicioFallido.setText("Inicio fallido intente otra vez");
@@ -90,15 +88,15 @@ public class InicioController {
     @FXML
     void btnRegistroOnAction(ActionEvent event) throws IOException {
         System.out.println(getClass().getResource("/co/edu/uniquindio/poo/proyectofinalinmosmart/registro.fxml"));
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/co/edu/uniquindio/poo/proyectofinalinmosmart/registro.fxml")
-            );
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("/co/edu/uniquindio/poo/proyectofinalinmosmart/registro.fxml")
+        );
 
-            Parent root = loader.load();
+        Parent root = loader.load();
 
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-        }
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+    }
 
 
 }

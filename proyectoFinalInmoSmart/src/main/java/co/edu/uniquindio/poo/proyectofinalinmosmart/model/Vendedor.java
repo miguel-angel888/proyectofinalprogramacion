@@ -22,13 +22,14 @@ public class Vendedor extends Usuario{
 
     public Vendedor() {
         this.listaInmuebles = new ArrayList<>();
+        añadirInmuebleBase();
     }
 
     public Vendedor(String id, String nombre, String telefono, String correo, int puntosReputacion,
                     ArrayList<Transaccion> listaTransacciones, ClasificacionUsuario clasificacionUsuario, ArrayList<Inmueble> listaInmuebles) {
         super(id, nombre, telefono, correo, puntosReputacion, listaTransacciones, clasificacionUsuario);
         this.listaInmuebles = listaInmuebles;
-
+        añadirInmuebleBase();
     }
 
     //Getters y Setters

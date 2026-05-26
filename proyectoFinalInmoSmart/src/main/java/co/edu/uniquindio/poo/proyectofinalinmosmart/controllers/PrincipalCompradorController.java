@@ -115,24 +115,9 @@ public class PrincipalCompradorController {
     @FXML
     void btnComprarOnAction(ActionEvent event) throws IOException {
         lblCompra.setText("Felicitaciones ");
-        Usuario usu = empresa.encontrarUsuario(InicioController.Sesion.id);
-
-            Inmueble inmueble =  tblPublicaciones.getSelectionModel().getSelectedItem();
-        for (Usuario usuario : empresa.getListaUsuarios()) {
-            if (usuario instanceof Vendedor vendedor) {
-
-                for (Inmueble inmuebleAux : vendedor.getListaInmuebles()) {
-
-                    if (inmueble.getCodigo().equals(inmuebleAux.getCodigo())) {
-                        vendedor.eliminarPublicacion(inmuebleAux);
-                        break;
-                    }
-                }
-            }
-        }
+            tblPublicaciones.getItems().clear();
 
 
-            actualizarTabla();
         }
 
     @FXML

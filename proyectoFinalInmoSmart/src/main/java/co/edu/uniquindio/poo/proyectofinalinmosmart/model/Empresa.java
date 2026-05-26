@@ -122,8 +122,7 @@ public class Empresa {
                         ( (Vendedor) v1).getListaInmuebles().size());
 
         return vendedores;
-        }
-
     }
 
+}
 
