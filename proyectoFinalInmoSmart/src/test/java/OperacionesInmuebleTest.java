@@ -33,10 +33,10 @@ public class OperacionesInmuebleTest {
         ArrayList<Usuario> listaUsuariosVerdadera = new ArrayList<>();
         Usuario vendedor = new Vendedor("1", "Juan", "123", "correo");
         Usuario comprador = new Comprador("2", "Pedro", "456", "correo2");
-
+        Empresa empresa = new Empresa();
         listaUsuariosVerdadera.add(comprador);
         listaUsuariosVerdadera.add(vendedor);
-        Empresa empresa = new Empresa();
+
 
         empresa.registrarUsuario(comprador);
         empresa.registrarUsuario(vendedor);
@@ -52,16 +52,8 @@ public class OperacionesInmuebleTest {
         LOG.info("Iniciando el registro de inmuebles");
 
         Vendedor vendedor = new Vendedor("1", "Juan", "123", "correo");
-
-
         vendedor.getListaInmuebles().clear();
-
-        boolean resultado = vendedor.publicarInmueble(
-                "123",
-                "Armenia",
-                "25",
-                "25000"
-        );
+        boolean resultado = vendedor.publicarInmueble("123", "Armenia", "25", "25000");
 
         assertTrue(resultado);
         assertEquals(1, vendedor.getListaInmuebles().size());
@@ -81,16 +73,8 @@ public class OperacionesInmuebleTest {
             LOG.info("Iniciando prueba de eliminación de inmueble");
 
             Vendedor vendedor = new Vendedor("1", "Juan", "123", "correo");
-
             vendedor.getListaInmuebles().clear();
-
-            Inmueble inmueble = new Inmueble(
-                    "123",
-                    "Armenia",
-                    "25",
-                    "25000"
-            );
-
+            Inmueble inmueble = new Inmueble("123", "Armenia", "25", "25000");
             vendedor.getListaInmuebles().add(inmueble);
 
             assertEquals(1, vendedor.getListaInmuebles().size());
