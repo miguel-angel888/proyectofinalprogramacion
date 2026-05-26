@@ -36,7 +36,7 @@ ofertas permite que los compradores realicen ofertas sobre los inmuebles publica
 Transcciones: Procesa la compra del inmueble y registra la operación realizada
 
 
-reportes: genera consultas e información sobre usuarios, inmuebles, compras y ventas realizadas.
+reportes: genera consultas e información sobre usuarios
 
 De esta manera cada parte del sistema se desarrolla de forma independiente pero trabajando en conjunto dentro de la plataforma
 
@@ -73,11 +73,6 @@ Compra de inmuebles
 Se verificó el proceso completo de comrp´ra
 
 
-Generación de reportes
-Se probaron consultas relacionadas con:
-
-
-vendedores con más publicaciones
 
 
 
