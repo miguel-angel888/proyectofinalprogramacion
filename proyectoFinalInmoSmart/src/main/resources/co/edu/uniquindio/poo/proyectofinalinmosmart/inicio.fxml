@@ -41,6 +41,6 @@
       </ImageView>
       <Label fx:id="lblInicioFallido" contentDisplay="CENTER" layoutX="375.0" layoutY="288.0" prefHeight="21.0" prefWidth="200.0" textFill="RED" />
       <Button fx:id="btnIniciarSesion" layoutX="375.0" layoutY="239.0" mnemonicParsing="false" onAction="#onClick" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #246807;" text="Iniciar Sesion" textFill="WHITE" />
-      <Button fx:id="btnRegistro" layoutX="371.0" layoutY="315.0" mnemonicParsing="false" onAction="#btnRegistroOnAction" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #246807;" text="Registro" textFill="WHITE" />
+      <Button fx:id="btnRegistro" layoutX="376.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnRegistroOnAction" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #246807;" text="Registro" textFill="WHITE" />
    </children>
 </AnchorPane>
