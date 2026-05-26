@@ -11,4 +11,5 @@ module co.edu.uniquindio.poo.proyectofinalinmosmart {
     exports co.edu.uniquindio.poo.proyectofinalinmosmart.controllers;
     opens co.edu.uniquindio.poo.proyectofinalinmosmart.controllers to javafx.fxml;
     opens co.edu.uniquindio.poo.proyectofinalinmosmart.model to javafx.base;
+    exports co.edu.uniquindio.poo.proyectofinalinmosmart.model;
 }

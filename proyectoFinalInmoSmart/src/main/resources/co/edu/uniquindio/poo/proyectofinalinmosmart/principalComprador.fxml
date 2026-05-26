@@ -63,5 +63,11 @@
             <Font size="23.0" />
          </font>
       </Label>
+      <Button fx:id="btnReporte" layoutX="530.0" layoutY="498.0" mnemonicParsing="false" onAction="#btnReporteOnAction" opacity="0.0" prefHeight="31.0" prefWidth="49.0" />
+      <ImageView fitHeight="38.0" fitWidth="54.0" layoutX="598.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../imagenes/Anotación%202026-05-26%20022942.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

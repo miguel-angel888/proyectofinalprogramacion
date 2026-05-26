@@ -1,7 +1,6 @@
 package co.edu.uniquindio.poo.proyectofinalinmosmart.controllers;
 
 import co.edu.uniquindio.poo.proyectofinalinmosmart.model.Comprador;
-import co.edu.uniquindio.poo.proyectofinalinmosmart.model.Empresa;
 import co.edu.uniquindio.poo.proyectofinalinmosmart.model.Usuario;
 import co.edu.uniquindio.poo.proyectofinalinmosmart.model.Vendedor;
 import javafx.event.ActionEvent;
@@ -17,7 +16,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 
 import static co.edu.uniquindio.poo.proyectofinalinmosmart.HelloApplication.empresa;
@@ -71,7 +69,7 @@ public class RegistroController {
             empresa.getListaUsuarios().add(nuevoVendedor);
         }
         else if(rol.equals("Comprador")){
-            Usuario nuevoVendedor = new Comprador(documento,nombre,telefono,correo);
+            Usuario nuevoVendedor = new Comprador();
             lblInicioFallido.setText("Registro Exitoso Comprador");
             empresa.getListaUsuarios().add(nuevoVendedor);
         }

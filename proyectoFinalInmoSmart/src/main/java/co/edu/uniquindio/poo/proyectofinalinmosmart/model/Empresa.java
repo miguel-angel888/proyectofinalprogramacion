@@ -2,6 +2,8 @@ package co.edu.uniquindio.poo.proyectofinalinmosmart.model;
 
 import java.util.ArrayList;
 
+import static co.edu.uniquindio.poo.proyectofinalinmosmart.HelloApplication.empresa;
+
 public class Empresa {
 
     //Atributos
@@ -62,7 +64,7 @@ public class Empresa {
             return "Usuario registrado";
         }
         for (Usuario u : listaUsuarios) {
-            if (u.getId().equals(usuario.getId())) {
+            if (u.getId() != null && u.getId().equals(usuario.getId())) {
                 return "Usuario ya existe";
             }
 
@@ -104,5 +106,24 @@ public class Empresa {
         listaUsuarios.add(new Vendedor("000", "Base", "000", "Base@Gmail"));
     }
 
+    //Metodo para buscar y ordenas los empleados con mayor numero de inmuebles
 
-}
+    public ArrayList<Usuario> listaUsuariosMayorInmueble(){
+        ArrayList<Usuario> vendedores = new ArrayList<>();
+
+        for (Usuario usuario : empresa.getListaUsuarios()) {
+            if (usuario instanceof Vendedor) {
+                vendedores.add((Vendedor) usuario);
+            }
+        }
+
+        vendedores.sort((v1, v2) ->
+                ( (Vendedor)v2).getListaInmuebles().size() -
+                        ( (Vendedor) v1).getListaInmuebles().size());
+
+        return vendedores;
+        }
+
+    }
+
+

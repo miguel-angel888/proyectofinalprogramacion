@@ -20,62 +20,32 @@ import java.io.IOException;
 
 import static co.edu.uniquindio.poo.proyectofinalinmosmart.HelloApplication.empresa;
 
-public class BusquedaPropiedadesController {
-
-    @FXML
-    private Label lblNombreUsuario;
-    @FXML
-    private TableColumn<String, String> colCodigo;
-
-    @FXML
-    private TableColumn<String,String> colCiudad;
-
-    @FXML
-    private TableColumn<String, String> colPrecio;
-    @FXML
-    private TableColumn<String,String> colArea;
-    @FXML
-    private TableView<Inmueble> tblPublicaciones;
+public class ReporteController {
 
     @FXML
     private Button btnRegresar;
 
     @FXML
-    void initialize() {
-        lblNombreUsuario.setText("Bienvenido "+ InicioController.Sesion.nombre);
-        colCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
-        colCiudad.setCellValueFactory(new PropertyValueFactory<>("ciudad"));
-        colArea.setCellValueFactory(new PropertyValueFactory<>("areaMetros"));
-        colPrecio.setCellValueFactory(new PropertyValueFactory<>("precio"));
+    private Button btnBusqueda;
 
-        actualizaTabla();
-
-    }
-
-    private void actualizaTabla(){
-        tblPublicaciones.getItems().clear();
-        for(Usuario vendedor: empresa.getListaUsuarios()){
-            if(vendedor instanceof Vendedor){
-
-                tblPublicaciones.getItems().addAll(((Vendedor) vendedor).getListaInmuebles());
-
-            }
-        }
-    }
     @FXML
-    void btnRegresarOnAction(ActionEvent event) throws IOException {
+    private Label lblNombreUsuario;
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/proyectofinalinmosmart/inicio.fxml"));
+    @FXML
+    private TableColumn<Integer, Integer> colViviendas;
 
-        Parent root = loader.load();
+    @FXML
+    private TableColumn<String, String> colNombre;
 
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
+    @FXML
+    private TableColumn<String, String> colID;
+
+    @FXML
+    private TableView<Usuario> tblPublicaciones;
 
     @FXML
     private Button btnHome;
+
 
     @FXML
     void btnHomeOnAction(ActionEvent event) throws IOException {
@@ -100,16 +70,42 @@ public class BusquedaPropiedadesController {
     }
 
     @FXML
-    private Button btnReporte;
+    void btnRegresarOnAction(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/proyectofinalinmosmart/inicio.fxml"));
 
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
     @FXML
-    void btnReporteOnAction(ActionEvent event) throws IOException {
-        System.out.println("Entró al botón reporte");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/proyectofinalinmosmart/reporte.fxml"));
+    void btnBusquedaOnAction(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/proyectofinalinmosmart/busquedaPropiedades.fxml"));
 
         Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         stage.setScene(new Scene(root));
+    }
+
+    @FXML
+    void initialize() {
+        lblNombreUsuario.setText("Bienvenido "+ InicioController.Sesion.nombre);
+        colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        colID.setCellValueFactory(new PropertyValueFactory<>("id"));
+        colViviendas.setCellValueFactory(new PropertyValueFactory<>("nInmuebles"));
+        actualizaTabla();
+
+    }
+
+    private void actualizaTabla(){
+        tblPublicaciones.getItems().clear();
+
+                tblPublicaciones.getItems().addAll(empresa.listaUsuariosMayorInmueble());
+
+
+
     }
 }

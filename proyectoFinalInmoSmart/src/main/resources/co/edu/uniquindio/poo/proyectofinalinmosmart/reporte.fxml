@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.proyectofinalinmosmart.controllers.BusquedaPropiedadesController">
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.proyectofinalinmosmart.controllers.ReporteController">
    <children>
       <ImageView fitHeight="535.0" fitWidth="996.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -29,21 +29,25 @@
          </image>
       </ImageView>
       <Button fx:id="btnRegresar" layoutX="878.0" layoutY="493.0" mnemonicParsing="false" onAction="#btnRegresarOnAction" opacity="0.0" prefHeight="41.0" prefWidth="54.0" />
-      <Label layoutX="367.0" layoutY="30.0" style="-: #246807;" text="Busqueda Inmueble" textFill="#246807">
+      <Label layoutX="245.0" layoutY="30.0" style="-: #246807;" text="Reporte vendedores con mas viviendas" textFill="#246807">
          <font>
             <Font name="Comic Sans MS" size="27.0" />
          </font>
       </Label>
-      <TableView fx:id="tblPublicaciones" layoutX="334.0" layoutY="99.0" prefHeight="366.0" prefWidth="308.0">
+      <Button fx:id="btnBusqueda" layoutX="397.0" layoutY="493.0" mnemonicParsing="false" onAction="#btnBusquedaOnAction" opacity="0.0" prefHeight="41.0" prefWidth="49.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="382.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../imagenes/Anotación%202026-05-26%20003825.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblPublicaciones" layoutX="330.0" layoutY="84.0" prefHeight="368.0" prefWidth="304.0">
          <columns>
-            <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Codigo" />
-            <TableColumn fx:id="colCiudad" prefWidth="75.0" text="Ciudad" />
-            <TableColumn fx:id="colArea" prefWidth="75.0" text="Area(Metros)" />
-            <TableColumn fx:id="colPrecio" prefWidth="75.0" text="Precio" />
+            <TableColumn fx:id="colNombre" prefWidth="105.0" text="Nombre" />
+            <TableColumn fx:id="colID" prefWidth="103.0" text="ID" />
+            <TableColumn fx:id="colViviendas" prefWidth="94.0" text="N°Viviendas" />
          </columns>
       </TableView>
-      <Button fx:id="btnReporte" layoutX="531.0" layoutY="491.0" mnemonicParsing="false" onAction="#btnReporteOnAction" opacity="0.0" prefHeight="31.0" prefWidth="41.0" />
-      <ImageView fitHeight="38.0" fitWidth="54.0" layoutX="588.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="38.0" fitWidth="54.0" layoutX="589.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../../../../../../imagenes/Anotación%202026-05-26%20022942.jpg" />
          </image>

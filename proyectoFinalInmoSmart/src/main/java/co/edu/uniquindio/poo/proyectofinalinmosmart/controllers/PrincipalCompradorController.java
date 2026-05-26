@@ -134,7 +134,21 @@ public class PrincipalCompradorController {
 
             actualizarTabla();
         }
+
+    @FXML
+    private Button btnReporte;
+    @FXML
+    void btnReporteOnAction(ActionEvent event) throws IOException {
+        System.out.println("Entró al botón reporte");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/proyectofinalinmosmart/reporte.fxml"));
+
+        Parent root = loader.load();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        stage.setScene(new Scene(root));
     }
+}
+
 
 
 

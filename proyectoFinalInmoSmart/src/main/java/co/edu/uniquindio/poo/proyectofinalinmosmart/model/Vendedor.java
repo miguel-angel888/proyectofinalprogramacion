@@ -6,6 +6,7 @@ public class Vendedor extends Usuario{
 
     //Atributos
 
+
     //Relaciones
     private ArrayList<Inmueble> listaInmuebles;
 
@@ -15,18 +16,28 @@ public class Vendedor extends Usuario{
         super(id, nombre, telefono, correo);
         this.listaInmuebles = new ArrayList<>();
         añadirInmuebleBase();
+        this.listaInmuebles = new ArrayList<>();
+
     }
 
     public Vendedor() {
+        this.listaInmuebles = new ArrayList<>();
     }
 
     public Vendedor(String id, String nombre, String telefono, String correo, int puntosReputacion,
                     ArrayList<Transaccion> listaTransacciones, ClasificacionUsuario clasificacionUsuario, ArrayList<Inmueble> listaInmuebles) {
         super(id, nombre, telefono, correo, puntosReputacion, listaTransacciones, clasificacionUsuario);
         this.listaInmuebles = listaInmuebles;
+
     }
 
     //Getters y Setters
+
+    public int getNInmuebles() {
+        return listaInmuebles.size();
+    }
+
+
 
     public ArrayList<Inmueble> getListaInmuebles() {
         return listaInmuebles;
