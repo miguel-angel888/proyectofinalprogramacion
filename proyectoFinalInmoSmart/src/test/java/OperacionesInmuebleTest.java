@@ -53,7 +53,7 @@ public class OperacionesInmuebleTest {
 
         Vendedor vendedor = new Vendedor("1", "Juan", "123", "correo");
 
-        
+
         vendedor.getListaInmuebles().clear();
 
         boolean resultado = vendedor.publicarInmueble(
@@ -75,5 +75,32 @@ public class OperacionesInmuebleTest {
 
         LOG.info("Finalizando el registro de inmuebles");
     }
+    @Test
+    public void eliminarInmuebleTest() {
+
+            LOG.info("Iniciando prueba de eliminación de inmueble");
+
+            Vendedor vendedor = new Vendedor("1", "Juan", "123", "correo");
+
+            vendedor.getListaInmuebles().clear();
+
+            Inmueble inmueble = new Inmueble(
+                    "123",
+                    "Armenia",
+                    "25",
+                    "25000"
+            );
+
+            vendedor.getListaInmuebles().add(inmueble);
+
+            assertEquals(1, vendedor.getListaInmuebles().size());
+
+            vendedor.eliminarPublicacion(inmueble);
+
+            assertEquals(0, vendedor.getListaInmuebles().size());
+
+            LOG.info("Finalizando prueba de eliminación de inmueble");
+        }
+    
 }
 
