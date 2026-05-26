@@ -101,6 +101,6 @@ public class OperacionesInmuebleTest {
 
             LOG.info("Finalizando prueba de eliminación de inmueble");
         }
-    
+
 }
 
