@@ -1,8 +1,9 @@
 package co.edu.uniquindio.poo.proyectofinalinmosmart.model;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 
-public abstract class Usuario implements IOperacionInmobiliaria{
+public abstract class Usuario implements IOperacionInmueble{
 
     //Atributos
     private String id;
@@ -17,9 +18,19 @@ public abstract class Usuario implements IOperacionInmobiliaria{
 
     //Constructor
 
+    public Usuario(String id, String nombre, String telefono, String correo) {
+        this.id = id;
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.correo = correo;
+    }
+
+    public Usuario() {
+    }
+
     public Usuario(String id, String nombre, String telefono,
                    String correo, int puntosReputacion,
-                   ArrayList<Transaccion> listaTransacciones,ClasificacionUsuario clasificacionUsuario) {
+                   ArrayList<Transaccion> listaTransacciones, ClasificacionUsuario clasificacionUsuario) {
         this.id = id;
         this.nombre = nombre;
         this.telefono = telefono;

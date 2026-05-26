@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.proyectofinalinmosmart.controllers.BusquedaPropiedadesController">
+   <children>
+      <ImageView fitHeight="535.0" fitWidth="996.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../imagenes/PrincipalVendedor.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="59.0" fitWidth="66.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../imagenes/Perfil.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnHome" layoutX="322.0" layoutY="486.0" mnemonicParsing="false" onAction="#btnHomeOnAction" opacity="0.0" prefHeight="41.0" prefWidth="54.0" />
+      <Label fx:id="lblNombreUsuario" layoutX="55.0" layoutY="19.0" prefHeight="21.0" prefWidth="209.0" />
+      <ImageView fitHeight="41.0" fitWidth="49.0" layoutX="884.0" layoutY="493.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../imagenes/695f7d4c-cb3b-4d7e-a339-bfb92294bd27.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnRegresar" layoutX="878.0" layoutY="493.0" mnemonicParsing="false" onAction="#btnRegresarOnAction" opacity="0.0" prefHeight="41.0" prefWidth="54.0" />
+      <Label layoutX="367.0" layoutY="30.0" style="-: #246807;" text="Busqueda Inmueble" textFill="#246807">
+         <font>
+            <Font name="Comic Sans MS" size="27.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblPublicaciones" layoutX="334.0" layoutY="99.0" prefHeight="366.0" prefWidth="308.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Codigo" />
+            <TableColumn fx:id="colCiudad" prefWidth="75.0" text="Ciudad" />
+            <TableColumn fx:id="colArea" prefWidth="75.0" text="Area(Metros)" />
+            <TableColumn fx:id="colPrecio" prefWidth="75.0" text="Precio" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

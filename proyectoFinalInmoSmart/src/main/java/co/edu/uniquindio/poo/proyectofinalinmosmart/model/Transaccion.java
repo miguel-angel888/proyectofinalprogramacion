@@ -17,6 +17,9 @@ public class Transaccion {
     //Constructor
 
 
+    public Transaccion() {
+    }
+
     public Transaccion(String codigo, double valorFinal,
                        LocalDate fecha, Inmueble inmueble, Oferta oferta, Usuario usuario) {
         this.codigo = codigo;

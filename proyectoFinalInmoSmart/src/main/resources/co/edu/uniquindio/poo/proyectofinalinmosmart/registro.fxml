@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.proyectofinalinmosmart.controllers.RegistroController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="450.0" fitWidth="664.0" layoutX="-17.0" layoutY="-23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../imagenes/InicioSesion.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="375.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../imagenes/Anotación%202026-05-24%20233242.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="411.0" layoutY="39.0" text="Registro" textFill="#246807">
+               <font>
+                  <Font name="Eras Bold ITC" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombre" layoutX="377.0" layoutY="103.0" prefHeight="37.0" prefWidth="187.0" promptText="Nombre">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="cmbRol" layoutX="375.0" layoutY="251.0" prefHeight="31.0" prefWidth="187.0" promptText="Rol" />
+            <TextField fx:id="txtDocumento" layoutX="377.0" layoutY="140.0" prefHeight="37.0" prefWidth="187.0" promptText="Identificacion">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lblInicioFallido" contentDisplay="CENTER" layoutX="380.0" layoutY="67.0" prefHeight="36.0" prefWidth="187.0" textFill="RED">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Button fx:id="bntGuardar" layoutX="377.0" layoutY="283.0" mnemonicParsing="false" onAction="#btnGuardarOnAction" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #246807;" text="Guardar" textFill="WHITE" />
+            <Button fx:id="btnRegreso" layoutX="417.0" layoutY="325.0" mnemonicParsing="false" onAction="#btnRegresoOnAction" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #246807;" text="Inicio Sesion" textFill="WHITE" />
+            <TextField fx:id="txtCorreo" layoutX="376.0" layoutY="177.0" prefHeight="37.0" prefWidth="187.0" promptText="correo electronico">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtTelefono" layoutX="375.0" layoutY="214.0" prefHeight="37.0" prefWidth="187.0" promptText="telefono">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

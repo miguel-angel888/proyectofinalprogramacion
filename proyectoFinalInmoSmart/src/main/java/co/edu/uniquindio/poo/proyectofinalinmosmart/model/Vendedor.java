@@ -10,9 +10,19 @@ public class Vendedor extends Usuario{
     private ArrayList<Inmueble> listaInmuebles;
 
     //Constructor
+
+    public Vendedor(String id, String nombre, String telefono, String correo) {
+        super(id, nombre, telefono, correo);
+        this.listaInmuebles = new ArrayList<>();
+        añadirInmuebleBase();
+    }
+
+    public Vendedor() {
+    }
+
     public Vendedor(String id, String nombre, String telefono, String correo, int puntosReputacion,
-                    ArrayList<Transaccion> listaTransacciones, ArrayList<Inmueble> listaInmuebles) {
-        super(id, nombre, telefono, correo, puntosReputacion, listaTransacciones);
+                    ArrayList<Transaccion> listaTransacciones, ClasificacionUsuario clasificacionUsuario, ArrayList<Inmueble> listaInmuebles) {
+        super(id, nombre, telefono, correo, puntosReputacion, listaTransacciones, clasificacionUsuario);
         this.listaInmuebles = listaInmuebles;
     }
 
@@ -25,4 +35,31 @@ public class Vendedor extends Usuario{
     public void setListaInmuebles(ArrayList<Inmueble> listaInmuebles) {
         this.listaInmuebles = listaInmuebles;
     }
+
+
+    //Metodo para publicar inmuebles
+
+    public boolean publicarInmueble(String codigo,String ciudad,String area,String precio){
+
+        for(Inmueble inmueble : listaInmuebles){
+            if(inmueble.getCodigo().equals(codigo)){
+                return false;
+            }
+        }
+        listaInmuebles.add(new Inmueble( codigo, ciudad, area, precio));
+        return true;
+    }
+
+    //metodo para añadir un inmueble base{
+    public void añadirInmuebleBase( ) {
+        listaInmuebles.add(new Inmueble("", "", "", ""));
+    }
+
+    //metodo para eliminar una pubnlicacion
+    public void eliminarPublicacion(Inmueble inmueble) {
+        listaInmuebles.remove(inmueble);
+    }
+
+
+
 }

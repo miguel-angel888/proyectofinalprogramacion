@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.proyectofinalinmosmart.controllers.PrincipalCompradorController">
+   <children>
+      <ImageView fitHeight="535.0" fitWidth="996.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../imagenes/PrincipalVendedor.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="59.0" fitWidth="66.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../imagenes/Perfil.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnHome" layoutX="322.0" layoutY="486.0" mnemonicParsing="false" opacity="0.0" prefHeight="41.0" prefWidth="54.0" />
+      <Label fx:id="lblNombreUsuario" layoutX="55.0" layoutY="19.0" prefHeight="21.0" prefWidth="209.0" />
+      <ImageView fitHeight="41.0" fitWidth="49.0" layoutX="884.0" layoutY="493.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../imagenes/695f7d4c-cb3b-4d7e-a339-bfb92294bd27.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnRegresar" layoutX="878.0" layoutY="493.0" mnemonicParsing="false" onAction="#btnRegresarOnAction" opacity="0.0" prefHeight="41.0" prefWidth="54.0" />
+      <Label layoutX="367.0" layoutY="30.0" style="-: #246807;" text="Comprar Inmueble" textFill="#246807">
+         <font>
+            <Font name="Comic Sans MS" size="27.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#246807" height="366.0" layoutX="41.0" layoutY="97.0" opacity="0.53" stroke="BLACK" strokeType="INSIDE" width="281.0" />
+      <Label layoutX="55.0" layoutY="127.0" prefHeight="41.0" prefWidth="68.0" text="Codigo">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigo" layoutX="123.0" layoutY="132.0" promptText="Codigo" />
+      <Label layoutX="55.0" layoutY="190.0" prefHeight="41.0" prefWidth="68.0" text="Precio">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPrecio" layoutX="123.0" layoutY="195.0" promptText="1100000" />
+      <Button fx:id="btnComprar" layoutX="54.0" layoutY="384.0" mnemonicParsing="false" onAction="#btnComprarOnAction" prefHeight="31.0" prefWidth="252.0" style="-fx-background-color: #246807;" text="Comprar" textFill="WHITE" />
+      <TableView fx:id="tblPublicaciones" layoutX="390.0" layoutY="100.0" prefHeight="366.0" prefWidth="308.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Codigo" />
+            <TableColumn fx:id="colCiudad" prefWidth="75.0" text="Ciudad" />
+            <TableColumn fx:id="colArea" prefWidth="75.0" text="Area(Metros)" />
+            <TableColumn fx:id="colPrecio" prefWidth="75.0" text="Precio" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnBusqueda" layoutX="397.0" layoutY="493.0" mnemonicParsing="false" onAction="#btnBusquedaOnAction" opacity="0.0" prefHeight="41.0" prefWidth="49.0" />
+      <Button fx:id="btnBuscar" layoutX="56.0" layoutY="336.0" mnemonicParsing="false" onAction="#btnBuscarOnAction" prefHeight="31.0" prefWidth="252.0" style="-fx-background-color: #246807;" text="Buscar" textFill="WHITE" />
+      <Label fx:id="lblCompra" layoutX="736.0" layoutY="190.0" prefHeight="53.0" prefWidth="187.0" textFill="RED">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
