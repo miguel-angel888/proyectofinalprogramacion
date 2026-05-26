@@ -6,14 +6,14 @@ Para el desarrollo del sistema InmoSmart se identificaron las entidades principa
 Estas representan los elementos fundamentales del negocio y permiten modelar el funcionamiento de la plataforma.
 
 Entidades identificadas
-Empresa
-Usuario
-Comprador
-Vendedor
-inueble
-Publicación
-Oferta
-Transacción
+Empresa,
+Usuario,
+Comprador,
+Vendedor,
+inueble,
+Publicación,
+Oferta,
+Transacción,
 Notificacion
 
 
